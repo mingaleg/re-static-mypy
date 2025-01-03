@@ -65,6 +65,9 @@ tox = ">=4.12.1"
 pip = "^24.3.1"
 flake8 = "^7.1.1"
 flake8-pyproject = "^1.2.3"
+jinja2 = "^3.1.5"
+more-itertools = "^10.5.0"
+
 
 ############################
 ### Tools configuration  ###
@@ -100,6 +103,7 @@ testpaths = [
 [tool.ruff]
 extend-exclude = ["docs", ".tox"]
 target-version = "py39"
+line-length = 120
 
 [tool.ruff.lint]
 select = [

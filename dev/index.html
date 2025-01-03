@@ -313,17 +313,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -333,43 +322,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#package-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Package release
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-for-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands for development
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -553,32 +505,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#package-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Package release
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-for-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands for development
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -606,30 +532,7 @@
 <a href="https://github.com/charliermarsh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json" /></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 <a href="https://github.com/PyCQA/bandit"><img alt="security: bandit" src="https://img.shields.io/badge/security-bandit-yellow.svg" /></a></p>
-<h2 id="package-release">Package release</h2>
-<p>This setup uses <a href="https://github.com/mtkennerly/poetry-dynamic-versioning">poetry-dynamic-versioning</a>.
-This means it's not necessary to commit the version in the code but the CI pipeline
-will infer it from the git tag.</p>
-<p>To release a new version, just create a new release and tag in the GitHub repository, to:</p>
-<ul>
-<li>Build and deploy the python package to PyPI</li>
-<li>Build and deploy a new version of the documentation to GitHub pages</li>
-</ul>
-<p><strong>IMPORTANT:</strong> The default configuration requires the release name and the tag to follow
-the convention <code>vX.X.X</code> (semantic versioning preceded by lowercase <code>v</code>). It will publish
-the correct version on Pypi, omitting the <code>v</code> (ie. <code>v1.0.0</code> will publish <code>1.0.0</code>).</p>
-<p>This format can be customized, refer to <a href="https://github.com/mtkennerly/poetry-dynamic-versioning">poetry-dynamic-versioning docs</a></p>
-<h2 id="commands-for-development">Commands for development</h2>
-<p>All the common commands used during development can be run using make targets:</p>
-<ul>
-<li><code>make dev-dependencies</code>: Install dev requirements</li>
-<li><code>make update-dependencies</code>: Update dev requirements</li>
-<li><code>make fix</code>: Run code style and lint automatic fixes (where possible)</li>
-<li><code>make test</code>: Run test suite against system python version</li>
-<li><code>make check</code>: Run tests against all available python versions, code style and lint checks</li>
-<li><code>make type</code>, <code>make format</code>, <code>make lint</code>, <code>make bandit</code>: Run the relevant check</li>
-<li><code>make docs</code>: Render the mkdocs website locally</li>
-</ul>
+<p>mypy plugin for statically defined regular expressions</p>
 
 
 

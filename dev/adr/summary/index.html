@@ -527,25 +527,28 @@
 <p><em>File</em>: <code>adr/summary.md</code></p>
 <p><em>AssertionError</em>: </p>
 <div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 688, in render
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mkdocs_macros/plugin.py&quot;, line 688, in render
     return md_template.render(**page_variables)
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 1295, in render
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/jinja2/environment.py&quot;, line 1295, in render
     self.environment.handle_exception()
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 942, in handle_exception
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/jinja2/environment.py&quot;, line 942, in handle_exception
     raise rewrite_traceback_stack(source=source)
   File &quot;&lt;template&gt;&quot;, line 3, in top-level template code
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mkdocs_macros_adr_summary/plugin.py&quot;, line 44, in adr_summary
-    documents = [
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mkdocs_macros_adr_summary/plugin.py&quot;, line 45, in &lt;listcomp&gt;
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mkdocs_macros_adr_summary/plugin.py&quot;, line 45, in adr_summary
     parser.parse(absolute_path.joinpath(f), env.conf[&quot;docs_dir&quot;])
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mkdocs_macros_adr_summary/parser/base.py&quot;, line 49, in parse
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mkdocs_macros_adr_summary/parser/base.py&quot;, line 49, in parse
     metadata, ast = cls._get_metadata_and_ast(file)
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mkdocs_macros_adr_summary/parser/madr3.py&quot;, line 46, in _get_metadata_and_ast
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mkdocs_macros_adr_summary/parser/madr3.py&quot;, line 46, in _get_metadata_and_ast
     md_ast = cls.parser.parse(&quot;\n&quot;.join(md_file))
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mistune/markdown.py&quot;, line 105, in parse
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mistune/markdown.py&quot;, line 105, in parse
     result = hook3(self, result, state)
-  File &quot;/Users/mingaleg/re-static-mypy/venv/lib/python3.9/site-packages/mistune/plugins/footnotes.py&quot;, line 98, in md_footnotes_hook
+  File &quot;/opt/hostedtoolcache/Python/3.13.1/x64/lib/python3.13/site-packages/mistune/plugins/footnotes.py&quot;, line 98, in md_footnotes_hook
     assert isinstance(result, str)
+           ~~~~~~~~~~^^^^^^^^^^^^^
 AssertionError
 </code></pre></div>
 

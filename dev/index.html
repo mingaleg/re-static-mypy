@@ -1,6 +1,6 @@
 <!--=========================================================================-->
 <!-- Copyright (c) 2024 Federico Busetti                                     -->
-<!-- <729029+mingaleg@users.noreply.github.com>                              -->
+<!-- <729029+febus982@users.noreply.github.com>                              -->
 <!--                                                                         -->
 <!-- Permission is hereby granted, free of charge, to any person obtaining a -->
 <!-- copy of this software and associated documentation files (the "Software"), -->
@@ -642,26 +642,6 @@ It is configured with all the following features:</p>
 </ul>
 <h2 id="how-to-use-this-repository-template-to-create-a-new-package">How to use this repository template to create a new package</h2>
 <ul>
-<li>Configure a pending trusted publisher on <a href="https://pypi.org/manage/account/publishing">pypi</a> using the following values:<ul>
-<li>PyPI Project Name: The github repository name (in this case <code>re-static-mypy</code>)</li>
-<li>Owner: The github repository owner (in this case <code>mingaleg</code>)</li>
-<li>Repository name: The github repository name (in this case <code>re-static-mypy</code>)</li>
-<li>Workflow name: <code>release.yml</code></li>
-</ul>
-</li>
-<li>Create a GitHub Actions secret named <code>CODECLIMATE_REPORTER_ID</code> (at URL <code>https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/secrets/actions</code>)
-  containing the codeclimate reporter id (you can find it at <code>https://codeclimate.com/repos/YOUR_REPO_ID/settings/test_reporter</code>).
-  If you don't want to use CodeClimate just delete <code>workflows/python-quality.yml</code>.</li>
-<li>Update the badges in <code>README.md</code>! (check <a href="https://shields.io/">shields.io</a> for extra badges)</li>
-<li>Update the PyCharm Copyright profile in the IDE settings: Editor | Copyright | Copyright Profiles (if you want to use it)</li>
-<li>Setup local development:<ul>
-<li>Clone the repository</li>
-<li>Install poetry <code>pip install poetry</code></li>
-<li>Install dev dependencies with <code>make dev-dependencies</code></li>
-<li>(optional) It is strongly recommended to install <a href="https://pre-commit.com/#installation">pre-commit</a>
-  and run <code>pre-commit install</code> so that formatting and linting are automatically executed during <code>git commit</code>.</li>
-</ul>
-</li>
 <li>Setup GitHub pages (this need local development setup):<ul>
 <li>Initialise documentation branch <code>poetry run mike deploy dev latest --update-aliases --push</code></li>
 <li>Configure GitHub Pages to deploy from the <code>gh-pages</code> branch (at URL <code>https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/pages</code>)</li>

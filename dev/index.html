@@ -350,15 +350,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-repository-template-to-create-a-new-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use this repository template to create a new package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#package-release" class="md-nav__link">
     <span class="md-ellipsis">
       Package release
@@ -569,15 +560,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-repository-template-to-create-a-new-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use this repository template to create a new package
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#package-release" class="md-nav__link">
     <span class="md-ellipsis">
       Package release
@@ -624,35 +606,6 @@
 <a href="https://github.com/charliermarsh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json" /></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 <a href="https://github.com/PyCQA/bandit"><img alt="security: bandit" src="https://img.shields.io/badge/security-bandit-yellow.svg" /></a></p>
-<p>This template repository provides the boilerplate to create a python package.
-It is configured with all the following features:</p>
-<ul>
-<li>Test suite using <a href="https://tox.wiki/en/latest/index.html">tox</a> and <a href="https://docs.pytest.org/en/7.4.x/">pytest</a></li>
-<li>Typing using <a href="https://mypy.readthedocs.io/en/stable/">mypy</a></li>
-<li>Linting, security and code format using <a href="https://github.com/astral-sh/ruff">ruff</a> (using <a href="https://pypi.org/project/black/">black</a>
-  code style and <a href="https://github.com/PyCQA/bandit">bandit</a> security rules)</li>
-<li>Integration with CodeClimate for code quality and coverage checks</li>
-<li>CI pipeline supporting:<ul>
-<li>testing against multiple python versions</li>
-<li>releases on <a href="https://pypi.org">PyPI</a></li>
-<li>GitHub pages documentation using <a href="https://www.mkdocs.org">mkdocs</a></li>
-</ul>
-</li>
-<li>PyCharm profile basic configuration</li>
-</ul>
-<h2 id="how-to-use-this-repository-template-to-create-a-new-package">How to use this repository template to create a new package</h2>
-<ul>
-<li>Setup GitHub pages (this need local development setup):<ul>
-<li>Initialise documentation branch <code>poetry run mike deploy dev latest --update-aliases --push</code></li>
-<li>Configure GitHub Pages to deploy from the <code>gh-pages</code> branch (at URL <code>https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/pages</code>)</li>
-<li>Add the <code>main</code> branch and the <code>v*.*.*</code> tag rules to the "deployment branches and tags" list in the <code>gh-pages</code> environment (at URL <code>https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/environments</code>)</li>
-</ul>
-</li>
-</ul>
-<p><strong>IMPORTANT:</strong> The repository is configured to deploy on the <a href="https://test.pypi.org/">test PyPI repository</a>.
-It's strongly recommended to create the project in the <a href="https://test.pypi.org/">test PyPI repository</a> and test
-the deployment pipeline. When you're happy with the result, create the project on the official <a href="https://pypi.org/">PyPI repository</a>
-and remove the marked lines in <code>workflows/release.yml</code>.</p>
 <h2 id="package-release">Package release</h2>
 <p>This setup uses <a href="https://github.com/mtkennerly/poetry-dynamic-versioning">poetry-dynamic-versioning</a>.
 This means it's not necessary to commit the version in the code but the CI pipeline

@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Tox" type="Tox" factoryName="Tox">
-    <module name="bootstrap-python-package" />
+    <module name="re-static-mypy" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
-    <option name="SDK_HOME" value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/bootstrap-python-package-Co8LXxYn-py3.12/bin/python" />
-    <option name="SDK_NAME" value="Poetry (bootstrap-python-package)" />
+    <option name="SDK_HOME" value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/re-static-mypy-Co8LXxYn-py3.12/bin/python" />
+    <option name="SDK_NAME" value="Poetry (re-static-mypy)" />
     <option name="WORKING_DIRECTORY" value="" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />

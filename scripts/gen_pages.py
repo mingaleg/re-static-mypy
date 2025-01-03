@@ -1,4 +1,5 @@
 # ==============================================================================
+#  Copyright (c) 2025 Oleg Mingalev <oleg@mingalev.net>                        =
 #  Copyright (c) 2024 Federico Busetti                                         =
 #  <729029+febus982@users.noreply.github.com>                                  =
 #                                                                              =
@@ -41,7 +42,7 @@ import mkdocs_gen_files
 #                    Configuration                     #
 # -----------------------------------------------------#
 # Package source code relative path
-src_dir = "bootstrap_python_package"
+src_dir = "re_static_mypy"
 # Generated pages will be grouped in this nav folder
 nav_pages_path = "API-Reference"
 

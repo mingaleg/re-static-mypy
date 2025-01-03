@@ -13,31 +13,4 @@
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
 
-## Package release
-
-This setup uses [poetry-dynamic-versioning](https://github.com/mtkennerly/poetry-dynamic-versioning).
-This means it's not necessary to commit the version in the code but the CI pipeline
-will infer it from the git tag.
-
-To release a new version, just create a new release and tag in the GitHub repository, to:
-
-* Build and deploy the python package to PyPI
-* Build and deploy a new version of the documentation to GitHub pages
-
-**IMPORTANT:** The default configuration requires the release name and the tag to follow
-the convention `vX.X.X` (semantic versioning preceded by lowercase `v`). It will publish
-the correct version on Pypi, omitting the `v` (ie. `v1.0.0` will publish `1.0.0`).
-
-This format can be customized, refer to [poetry-dynamic-versioning docs](https://github.com/mtkennerly/poetry-dynamic-versioning)
-
-## Commands for development
-
-All the common commands used during development can be run using make targets:
-
-* `make dev-dependencies`: Install dev requirements
-* `make update-dependencies`: Update dev requirements
-* `make fix`: Run code style and lint automatic fixes (where possible)
-* `make test`: Run test suite against system python version
-* `make check`: Run tests against all available python versions, code style and lint checks
-* `make type`, `make format`, `make lint`, `make bandit`: Run the relevant check
-* `make docs`: Render the mkdocs website locally
+mypy plugin for statically defined regular expressions

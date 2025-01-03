@@ -12,31 +12,6 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
-This template repository provides the boilerplate to create a python package.
-It is configured with all the following features:
-
-* Test suite using [tox](https://tox.wiki/en/latest/index.html) and [pytest](https://docs.pytest.org/en/7.4.x/)
-* Typing using [mypy](https://mypy.readthedocs.io/en/stable/)
-* Linting, security and code format using [ruff](https://github.com/astral-sh/ruff) (using [black](https://pypi.org/project/black/)
-  code style and [bandit](https://github.com/PyCQA/bandit) security rules)
-* Integration with CodeClimate for code quality and coverage checks
-* CI pipeline supporting:
-    * testing against multiple python versions
-    * releases on [PyPI](https://pypi.org)
-    * GitHub pages documentation using [mkdocs](https://www.mkdocs.org)
-* PyCharm profile basic configuration
-
-## How to use this repository template to create a new package
-
-* Setup GitHub pages (this need local development setup):
-    * Initialise documentation branch `poetry run mike deploy dev latest --update-aliases --push`
-    * Configure GitHub Pages to deploy from the `gh-pages` branch (at URL `https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/pages`)
-    * Add the `main` branch and the `v*.*.*` tag rules to the "deployment branches and tags" list in the `gh-pages` environment (at URL `https://github.com/GITHUB_NAME_OR_ORGANIZATION/GITHUB_REPOSITORY/settings/environments`)
-
-**IMPORTANT:** The repository is configured to deploy on the [test PyPI repository](https://test.pypi.org/).
-It's strongly recommended to create the project in the [test PyPI repository](https://test.pypi.org/) and test
-the deployment pipeline. When you're happy with the result, create the project on the official [PyPI repository](https://pypi.org/)
-and remove the marked lines in `workflows/release.yml`.
 
 ## Package release
 

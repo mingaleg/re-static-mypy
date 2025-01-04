@@ -1,3 +1,4 @@
+import json
 import random
 import re
 from collections.abc import Iterator
@@ -341,7 +342,7 @@ BASE_CASES = [
     "(?i)[M]+",
     "(?i)[m]+",
     "^*",
-    '"(?:\\\\"|[^"])*?"',
+    "'(?:\\\\'|[^'])*?'",
     "^.*?$",
     "a[^>]*?b",
     "^a*?$",
@@ -396,13 +397,13 @@ def render() -> str:
     test_suites: list[TestSuite] = []
     for base_case in BASE_CASES:
         test_suite = TestSuite(
-            base_regex=repr(base_case),
+            base_regex=json.dumps(base_case),
             cases=[],
         )
         for case in expand_case(base_case):
             case_lines = [
                 "    check(",
-                f"        {case!r},",
+                f"        {json.dumps(case)},",
             ]
             for group in get_groups(case, flags=0):
                 if group.index == 0:

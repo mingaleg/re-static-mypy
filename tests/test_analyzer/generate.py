@@ -358,7 +358,7 @@ BASE_CASES = [
 
 def expand_case(pattern: str) -> Iterator[str]:
     max_cases_produced: Final = 5
-    rnd = random.Random(42)  # S311: no need for secure randomness here
+    rnd = random.Random(42)  # noqa S311: no need for secure randomness here
     open_parens_indices = [it.start() for it in re.finditer(r"\([^?]", pattern)]
     all_selected_indices = [*powerset(open_parens_indices)]
     if len(all_selected_indices) > max_cases_produced:

@@ -365,15 +365,10 @@ def expand_case(pattern: str) -> Iterator[str]:
         all_selected_indices = rnd.sample(all_selected_indices, max_cases_produced)
     for _selected_indices in all_selected_indices:
         selected_indices = [0, *_selected_indices]
-        split_into_sizes = [
-            next - prev for prev, next in pairwise(selected_indices)
-        ] + [None]
-        first_chunk, *chunks = [
-            "".join(it) for it in split_into(pattern, split_into_sizes)
-        ]
+        split_into_sizes = [next - prev for prev, next in pairwise(selected_indices)] + [None]
+        first_chunk, *chunks = ["".join(it) for it in split_into(pattern, split_into_sizes)]
         candidate_pattern = first_chunk + "".join(
-            f"(?P<group{idx}>{chunk[1:]}" if chunk else ""
-            for idx, chunk in enumerate(chunks)
+            f"(?P<group{idx}>{chunk[1:]}" if chunk else "" for idx, chunk in enumerate(chunks)
         )
         try:
             re.compile(candidate_pattern)

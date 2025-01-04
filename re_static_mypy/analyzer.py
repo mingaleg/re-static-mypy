@@ -34,9 +34,7 @@ def get_groups(pattern: str, flags: int) -> list[Group]:
     ]
 
 
-def _analyze(
-    *, rev_groupdict: Mapping[int, str], data: object, top_level: bool
-) -> Iterator[Group]:
+def _analyze(*, rev_groupdict: Mapping[int, str], data: object, top_level: bool) -> Iterator[Group]:
     if isinstance(data, SubPattern):
         data = data.data
     if not isinstance(data, Collection):
